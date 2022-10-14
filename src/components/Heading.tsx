@@ -13,13 +13,13 @@ export function Heading({size = 'md', children, asChild}: HeadingProps){
     const Comp = asChild ? Slot : 'h2';
 
     return (
-       <span className={clsx(
-        'Heading-gray-100 font-bold font-sans',
+       <Comp className={clsx(
+        'text-gray-100 font-bold font-sans',
         {
-            'Heading-xs': size === 'sm',
-            'Heading-xl': size === 'md',
-            'Heading-2xl': size === 'lg',
+            'text-xs': size === 'sm',
+            'text-xl': size === 'md',
+            'text-2xl': size === 'lg',
         }
-        )}>{children}</span>
+        )}>{children}</Comp>
     )
 }
